@@ -11,11 +11,19 @@ export class CountryPipe implements PipeTransform {
     for(var i=0; i<value.length;i++){
       if(value[i].country ===arg){  //in questo caso arg è una stringa
         myArray.push(value[i]);
+        //Assegna ad arg l'id nazione perchè possa essere usato nell'html
+        document.getElementById('nazione').innerHTML = arg;
       }
     }
+
+
+
+
     console.log("My array", myArray)
     return myArray;
   }
+
+
 
 
 }

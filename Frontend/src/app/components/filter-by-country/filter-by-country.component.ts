@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { CovidData } from '../../models/data.model';
+
 @Component({
   selector: 'app-filter-by-country',
   templateUrl: './filter-by-country.component.html',
@@ -22,4 +23,14 @@ export class FilterByCountryComponent implements OnInit {
   ngOnInit() {
     this.getEntries()
   }
+
+
+  //Questo codice javascript va' trasformato in typescript
+//   $("#country").autocomplete({
+//     source: covidData
+// });
+
+// $('#country').change(function () {
+//     alert($('#country').val());
+// });
 }
