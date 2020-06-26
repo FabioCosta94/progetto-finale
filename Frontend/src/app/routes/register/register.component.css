@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+.register-wrapper {
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-right: 10%;
+}
+
+.submit {
+    margin-top: 10px;
+}

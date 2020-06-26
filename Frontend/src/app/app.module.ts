@@ -1,3 +1,5 @@
+import { RegisterComponent } from './routes/register/register.component';
+import { LoginComponent } from './routes/login/login.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -24,6 +26,7 @@ import { FilterByComponent } from './routes/filter-by/filter-by.component';
 import { FilterByCountryComponent } from './components/filter-by-country/filter-by-country.component';
 import { TestApiComponent } from './routes/test-api/test-api.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +45,9 @@ import { TestApiComponent } from './routes/test-api/test-api.component';
     FilterByComponent,
     FilterByTwoComponent,
     FilterByCountryComponent,
-    TestApiComponent
+    TestApiComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

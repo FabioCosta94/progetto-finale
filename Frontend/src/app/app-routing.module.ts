@@ -1,3 +1,5 @@
+import { RegisterComponent } from './routes/register/register.component';
+import { LoginComponent } from './routes/login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './routes/dashboard/dashboard.component'
@@ -12,14 +14,16 @@ import { TestApiComponent } from './routes/test-api/test-api.component';
 
 const routes: Routes = [
   { path: "", redirectTo : '/welcome', pathMatch: 'full' },
-  {path: "welcome", component: WelcomeComponent},
+  { path: "welcome", component: WelcomeComponent},
   { path: "dashboard", component : DashboardComponent },
   { path: "add", component : AddComponent },
   { path: "details/:id", component : DetailsComponent },
   { path: "edit/:id", component: EditComponent },
   { path: "filterBy", component: FilterByComponent},
   { path: "sort", component: SortComponent},
-  { path: "testApi", component: TestApiComponent}
+  { path: "testApi", component: TestApiComponent},
+  { path: "login", component: LoginComponent},
+  { path: "register", component: RegisterComponent}
 ];
 
 @NgModule({
