@@ -25,6 +25,12 @@ import { SortComponent } from './routes/sort/sort.component';
 import { FilterByComponent } from './routes/filter-by/filter-by.component';
 import { FilterByCountryComponent } from './components/filter-by-country/filter-by-country.component';
 import { TestApiComponent } from './routes/test-api/test-api.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AutocompleteFilterComponent } from './components/autocomplete-filter/autocomplete-filter.component';
 
 
 @NgModule({
@@ -47,14 +53,20 @@ import { TestApiComponent } from './routes/test-api/test-api.component';
     FilterByCountryComponent,
     TestApiComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AutocompleteFilterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
