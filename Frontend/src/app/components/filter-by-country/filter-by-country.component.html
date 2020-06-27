@@ -7,17 +7,17 @@
         </div>
     </div> -->
     <!-- <table class="table" ng-controller="myCtrl2" *ngIf="country" > 
-      <thead class="thead-dark">
+    <thead class="thead-dark">
         <tr>
-          <th scope="col">Country</th>
-          <th scope="col">Cases</th>
-          <th scope="col">Date</th>
+        <th scope="col">Country</th>
+        <th scope="col">Cases</th>
+        <th scope="col">Date</th>
         </tr>
-      </thead> -->
+    </thead> -->
 
-    <form class="example-form">
-        <mat-form-field class="example-full-width">
-            <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" id="country" required [(ngModel)]="country">
+    <form>
+        <mat-form-field>
+            <input type="text" placeholder="Choose a country" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" id="country" required [(ngModel)]="country">
             <mat-autocomplete #auto="matAutocomplete">
                 <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                     {{option}}
