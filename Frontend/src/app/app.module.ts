@@ -23,6 +23,7 @@ import { SortComponent } from './routes/sort/sort.component';
 import { FilterByComponent } from './routes/filter-by/filter-by.component';
 import { FilterByCountryComponent } from './components/filter-by-country/filter-by-country.component';
 import { TestApiComponent } from './routes/test-api/test-api.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { TestApiComponent } from './routes/test-api/test-api.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AuthModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
