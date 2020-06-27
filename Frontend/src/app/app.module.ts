@@ -1,8 +1,5 @@
-import { RegisterComponent } from './routes/register/register.component';
-import { LoginComponent } from './routes/login/login.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -52,8 +49,6 @@ import { AutocompleteFilterComponent } from './components/autocomplete-filter/au
     FilterByTwoComponent,
     FilterByCountryComponent,
     TestApiComponent,
-    LoginComponent,
-    RegisterComponent,
     AutocompleteFilterComponent
   ],
   imports: [

@@ -1,5 +1,3 @@
-import { RegisterComponent } from './routes/register/register.component';
-import { LoginComponent } from './routes/login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './routes/dashboard/dashboard.component'
@@ -21,9 +19,7 @@ const routes: Routes = [
   { path: "edit/:id", component: EditComponent },
   { path: "filterBy", component: FilterByComponent},
   { path: "sort", component: SortComponent},
-  { path: "testApi", component: TestApiComponent},
-  { path: "login", component: LoginComponent},
-  { path: "register", component: RegisterComponent}
+  { path: "testApi", component: TestApiComponent}
 ];
 
 @NgModule({
