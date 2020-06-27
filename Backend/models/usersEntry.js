@@ -3,7 +3,7 @@
 module.exports = (sequelize, DataType) => {
   let UsersEntry = sequelize.define('UsersEntry', {
     // id missing because Sequelize adds it by default
-    username:  DataType.VARCHAR(20),
+    username:  DataType.STRING(20),
     password: DataType.TEXT,
     permissions: DataType.INTEGER(1),
    
