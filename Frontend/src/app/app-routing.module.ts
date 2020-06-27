@@ -12,7 +12,7 @@ import { TestApiComponent } from './routes/test-api/test-api.component';
 
 const routes: Routes = [
   { path: "", redirectTo : '/welcome', pathMatch: 'full' },
-  {path: "welcome", component: WelcomeComponent},
+  { path: "welcome", component: WelcomeComponent},
   { path: "dashboard", component : DashboardComponent },
   { path: "add", component : AddComponent },
   { path: "details/:id", component : DetailsComponent },

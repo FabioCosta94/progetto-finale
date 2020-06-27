@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -24,6 +23,13 @@ import { FilterByComponent } from './routes/filter-by/filter-by.component';
 import { FilterByCountryComponent } from './components/filter-by-country/filter-by-country.component';
 import { TestApiComponent } from './routes/test-api/test-api.component';
 import { AuthModule } from './auth/auth.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AutocompleteFilterComponent } from './components/autocomplete-filter/autocomplete-filter.component';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +49,8 @@ import { AuthModule } from './auth/auth.module';
     FilterByComponent,
     FilterByTwoComponent,
     FilterByCountryComponent,
-    TestApiComponent
+    TestApiComponent,
+    AutocompleteFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +58,12 @@ import { AuthModule } from './auth/auth.module';
     NgbModule,
     HttpClientModule,
     FormsModule,
-    AuthModule
+    AuthModule,
+    BrowserAnimationsModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
