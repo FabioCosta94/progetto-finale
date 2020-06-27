@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { CovidData } from '../../models/data.model';
+import {FormControl} from '@angular/forms';
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
 
 @Component({
   selector: 'app-filter-by-country',
@@ -10,6 +13,10 @@ import { CovidData } from '../../models/data.model';
 export class FilterByCountryComponent implements OnInit {
 
   constructor(private dataService:DataService) { }
+
+  myControl = new FormControl();
+  options: string[] = ['One', 'Two', 'Three'];
+  filteredOptions: Observable<string[]>;
 
   public covidData : CovidData [];
   public country:string; //per memorizzare la stringa dell’input
@@ -22,6 +29,17 @@ export class FilterByCountryComponent implements OnInit {
   }
   ngOnInit() {
     this.getEntries()
+    this.filteredOptions = this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(value => this._filter(value))
+      );
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
 
