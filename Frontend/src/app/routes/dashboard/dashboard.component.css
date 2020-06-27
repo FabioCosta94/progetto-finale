@@ -1,3 +1,10 @@
-.pointer{
+.pointer {
     cursor: pointer;
 }
+
+.prova {
+    min-height: 90vh;
+}
+
+
+/* Metti un valore in vh pari a 100-altezzaHeader-altezzaFooter */
