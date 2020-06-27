@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './routes/dashboard/dashboard.component'
@@ -10,8 +11,9 @@ import { FilterByComponent } from './routes/filter-by/filter-by.component';
 import { TestApiComponent } from './routes/test-api/test-api.component';
 
 
+
 const routes: Routes = [
-  { path: "", redirectTo : '/welcome', pathMatch: 'full' },
+  { path: "", redirectTo : '/loading', pathMatch: 'full' },
   {path: "welcome", component: WelcomeComponent},
   { path: "dashboard", component : DashboardComponent },
   { path: "add", component : AddComponent },
