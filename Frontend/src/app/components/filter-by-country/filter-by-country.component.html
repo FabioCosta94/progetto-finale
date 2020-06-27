@@ -1,19 +1,19 @@
 <div class="container p-5">
     <h1>Filter by country</h1>
     <!-- <div class="form-group row">
-        <label for="country" class="col-sm-2 col-form-label">Country</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="country" required [(ngModel)]="country">
-        </div>
-    </div> -->
-    <!-- <table class="table" ng-controller="myCtrl2" *ngIf="country" > 
-    <thead class="thead-dark">
-        <tr>
-        <th scope="col">Country</th>
-        <th scope="col">Cases</th>
-        <th scope="col">Date</th>
-        </tr>
-    </thead> -->
+      <label for="country" class="col-sm-2 col-form-label">Country</label>
+      <div class="col-sm-10">
+          <input type="text" class="form-control" id="country" required [(ngModel)]="country">
+      </div>
+  </div> -->
+    <!-- <table class="table" ng-controller="myCtrl2" *ngIf="country" >
+  <thead class="thead-dark">
+      <tr>
+      <th scope="col">Country</th>
+      <th scope="col">Cases</th>
+      <th scope="col">Date</th>
+      </tr>
+  </thead> -->
 
     <form>
         <mat-form-field>
@@ -31,7 +31,7 @@
     <h1 id="nazione"></h1>
 
     <!--Ciclo che mostra i dati del database corrispondenti ad una coutnry.
-    Probabilmente sarà da eliminare ma per il momento rimane come riferimento per il codice-->
+  Probabilmente sarà da eliminare ma per il momento rimane come riferimento per il codice-->
     <div class="pointer" *ngFor="let entry of covidData | country : country">
         <td>{{entry.cases}}</td>
         <td>{{entry.date | date}}</td>
