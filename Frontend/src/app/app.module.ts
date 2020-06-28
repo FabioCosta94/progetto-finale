@@ -28,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FilterByComponent,
     FilterByTwoComponent,
     FilterByCountryComponent,
-    TestApiComponent
+    TestApiComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -61,6 +63,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatAutocompleteModule,
     MatInputModule,
     MatFormFieldModule,
+    AuthModule,
     ReactiveFormsModule
   ],
   providers: [DataService],
