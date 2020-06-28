@@ -1,5 +1,12 @@
+
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { UsersService } from '../../../users.service';
+import { Router } from '@angular/router';
+import { UsersData } from './../../../models/users.model';
+
+
+
 
 @Component({
   selector: 'app-login',
@@ -8,12 +15,21 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private usersService: UsersService, private router: Router) { }
 
   ngOnInit(): void {
   }
-  onSubmit(f: NgForm){
-    console.log(f.value);
-    console.log(f.valid);
+
+  usersEntry : UsersData
+
+  onSubmit(form: NgForm){
+    this.usersEntry = form.form.value;
+    console.log(this.usersEntry);
+    // console.log(f.value);
+    // console.log(f.valid);
+    this.usersService.addEntry(this.usersEntry).subscribe(response => {
+      console.log(response);
+      this.router.navigate(['/dashboard']);
+    })
   }
 }
